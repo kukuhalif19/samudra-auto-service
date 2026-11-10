@@ -10,7 +10,8 @@ Tanggal update: 2026-11-10
 - `npm run lint` berhasil.
 - `npm run build` berhasil; route `/` static.
 - Repository GitHub dibuat dan branch `main` berhasil dipush.
-- Deployment Vercel dibuat dengan status `Ready`.
+- Deployment production Vercel `Ready` dan berhasil diverifikasi melalui `vercel curl`.
+- GitHub repository sudah terkoneksi ke project Vercel; push ke `main` memicu deployment baru.
 
 ## File Berubah
 - `app/page.tsx`, `app/layout.tsx`, `app/globals.css`
@@ -19,13 +20,11 @@ Tanggal update: 2026-11-10
 - `README.md`, `.env.example`, `.gitignore`
 
 ## Masalah / Catatan Tertunda
-- Repository GitHub belum terdeteksi sebagai deployment otomatis di API GitHub; deployment dilakukan lewat Vercel CLI.
-- URL Vercel merespons `302` menuju Vercel SSO saat dicek tanpa sesi, sehingga akses publik belum tervalidasi.
+- Deployment Protection (Vercel Authentication) aktif di project Vercel, sehingga URL publik membutuhkan login Vercel kecuali dimatikan di dashboard.
 - Nomor WhatsApp masih `XXXXX`.
 - Alamat lengkap, jam operasional final, dan foto asli belum dikonfirmasi.
 
 ## Langkah Berikutnya
-- Matikan Deployment Protection/SSO pada project Vercel bila website harus dapat dilihat klien tanpa login.
-- Hubungkan project Vercel ke repository GitHub jika ingin auto-deploy dari push.
+- Matikan Deployment Protection di Vercel Dashboard (Settings → Deployment Protection) agar klien bisa membuka website tanpa login.
 - Ganti placeholder kontak dan lengkapi data bisnis setelah dikonfirmasi pemilik.
 - Tambahkan foto bengkel dan teknisi asli sebelum presentasi final.

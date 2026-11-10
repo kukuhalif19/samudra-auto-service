@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Samudra Auto Service — Bengkel Mobil & Home Service Pekanbaru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0f1c24;
+  --navy-light: #182833;
+  --steel: #2e4453;
+  --slate: #486577;
+  --muted: #7b93a4;
+  --bg-light: #f5f7f9;
+  --white: #ffffff;
+  --card-border: #e2e8ee;
+  --orange: #e45b34;
+  --orange-hover: #c94925;
+  --orange-soft: #fcf1ed;
+  --blue-tag: #e8f0f6;
+  --blue-tag-text: #1d4b6e;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--white);
+  color: var(--navy);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+
+/* Top Announcement */
+.topbar {
+  background: var(--navy);
+  color: var(--muted);
+  font-size: 13px;
+  padding: 8px 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.topbar-left { display: flex; gap: 20px; align-items: center; }
+.topbar-badge {
+  background: var(--orange);
+  color: white;
+  font-weight: 700;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.topbar-right { display: flex; gap: 16px; }
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  border-bottom: 1px solid var(--card-border);
+  padding: 0 5vw;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--navy);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+  color: var(--navy);
+  line-height: 1.1;
+}
+.brand-title span { color: var(--orange); }
+.brand-subtitle { font-size: 11px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+
+.nav-menu {
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--steel);
+}
+.nav-menu a:hover { color: var(--orange); }
+
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.btn-primary {
+  background: var(--orange);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+.btn-primary:hover { background: var(--orange-hover); }
+.btn-secondary {
+  background: var(--white);
+  color: var(--navy);
+  border: 1px solid var(--card-border);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-secondary:hover { background: var(--bg-light); border-color: var(--slate); }
+
+/* Hero Section */
+.hero {
+  padding: 64px 5vw 80px;
+  background: linear-gradient(180deg, #f8fbfd 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--card-border);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue-tag);
+  color: var(--blue-tag-text);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.hero-h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(38px, 4.2vw, 54px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+.hero-h1 span {
+  color: var(--orange);
+}
+.hero-p {
+  font-size: 17px;
+  color: var(--slate);
+  line-height: 1.65;
+  margin-bottom: 32px;
+  max-width: 540px;
+}
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 32px;
+  border-top: 1px solid var(--card-border);
+}
+.stat-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--navy);
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* Hero Visual Box / Booking Card */
+.booking-card {
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 20px 40px -15px rgba(15, 28, 36, 0.08);
+  padding: 32px;
+}
+.card-header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--card-border);
+}
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+}
+.card-sub {
+  font-size: 13px;
+  color: var(--muted);
+}
+.option-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  background: var(--bg-light);
+  padding: 4px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.toggle-btn {
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: var(--slate);
+}
+.toggle-btn.active {
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.form-group {
+  margin-bottom: 16px;
+}
+.form-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.form-select, .form-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--navy);
+  background: var(--bg-light);
+  outline: none;
+}
+.form-select:focus, .form-input:focus {
+  border-color: var(--orange);
+  background: white;
+}
+.card-notice {
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 14px;
+}
+
+/* Trust Bar / Logos */
+.trust-bar {
+  padding: 32px 5vw;
+  background: var(--white);
+  border-bottom: 1px solid var(--card-border);
+}
+.trust-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.trust-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.brand-chips {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand-chip {
+  padding: 6px 14px;
+  background: var(--bg-light);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--steel);
+}
+
+/* Service Grid Section */
+.section {
+  padding: 88px 5vw;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 56px;
+}
+.section-tag {
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+.section-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
+}
+.section-desc {
+  font-size: 16px;
+  color: var(--slate);
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.service-card {
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 28px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--slate);
+  box-shadow: 0 16px 30px -10px rgba(15, 28, 36, 0.08);
+}
+.service-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: var(--orange-soft);
+  color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.service-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+.service-detail {
+  font-size: 14px;
+  color: var(--slate);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.service-points {
+  list-style: none;
+  font-size: 13px;
+  color: var(--steel);
+  margin-bottom: 24px;
+}
+.service-points li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.service-action {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--orange);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Home Service Spotlight Banner */
+.spotlight-banner {
+  background: var(--navy);
+  color: white;
+  border-radius: 20px;
+  padding: 64px 60px;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.spotlight-banner::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(228, 91, 52, 0.25) 0%, transparent 70%);
+}
+.spotlight-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.spotlight-p {
+  color: #cbd7df;
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: 28px;
+}
+.spotlight-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.step-item {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 16px;
+  border-radius: 10px;
+}
+.step-num {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--orange);
+  margin-bottom: 6px;
+}
+.step-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
+
+/* Workshop & Map Section */
+.workshop-section {
+  background: var(--bg-light);
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+  padding: 88px 5vw;
+}
+.workshop-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 48px;
+  align-items: center;
+}
+.workshop-info h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+.info-box {
+  background: white;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 24px;
+}
+.info-row {
+  display: flex;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--card-border);
+}
+.info-row:last-child { border-bottom: none; }
+.info-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--bg-light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  flex-shrink: 0;
+}
+.info-content h4 { font-size: 14px; font-weight: 700; color: var(--navy); }
+.info-content p { font-size: 13px; color: var(--slate); margin-top: 2px; }
+
+.map-card {
+  background: white;
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+}
+.map-placeholder {
+  height: 320px;
+  background: #e5ebf0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--slate);
+  position: relative;
+}
+.map-badge {
+  background: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+}
+.map-footer {
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Final CTA */
+.final-cta {
+  padding: 96px 5vw;
+  text-align: center;
+  background: white;
+}
+.final-box {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.final-h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+.final-p {
+  font-size: 18px;
+  color: var(--slate);
+  margin-bottom: 32px;
+}
+
+/* Footer */
+footer {
+  background: var(--navy);
+  color: #8c9fae;
+  padding: 64px 5vw 32px;
+  font-size: 14px;
+}
+.footer-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 14px;
+}
+.footer-col h5 {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a:hover { color: white; }
+.copyright {
+  text-align: center;
+  padding-top: 32px;
+  font-size: 12px;
+  color: #5c6f7e;
+}
+
+@media (max-width: 960px) {
+  .hero-grid, .workshop-grid, .spotlight-banner { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .nav-menu { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="topbar">
+  <div class="topbar-left">
+    <span class="topbar-badge">PEKANBARU & SEKITARNYA</span>
+    <span>Workshop Fisik & Layanan Panggilan Teknisi ke Rumah / Kantor</span>
+  </div>
+  <div class="topbar-right">
+    <span>Senin – Sabtu: 08.00 – 17.00 WIB</span>
+  </div>
+</div>
+
+<!-- Header / Nav -->
+<header class="navbar">
+  <div class="brand">
+    <div class="brand-icon">
+      <!-- SVG Car Repair Icon (No Emoji) -->
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e45b34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+        <circle cx="7" cy="17" r="2"/>
+        <path d="M9 17h6"/>
+        <circle cx="17" cy="17" r="2"/>
+      </svg>
+    </div>
+    <div>
+      <div class="brand-title">SAMUDRA <span>AUTO</span></div>
+      <div class="brand-subtitle">SERVICE · PEKANBARU</div>
+    </div>
+  </div>
+
+  <nav class="nav-menu">
+    <a href="#layanan">Layanan</a>
+    <a href="#home-service">Home Service</a>
+    <a href="#lokasi">Lokasi Bengkel</a>
+    <a href="#tentang">Standar Kerja</a>
+  </nav>
+
+  <div class="nav-cta">
+    <a href="https://wa.me/62XXXXX" class="btn-primary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      Konsultasi WhatsApp: XXXXX
+    </a>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-tag">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        BENGKEL MOBIL SPESIALIS & HOME SERVICE
+      </div>
+      <h1 class="hero-h1">Solusi Perawatan Mobil <span>Tanpa Cemas</span> & Transparan di Pekanbaru.</h1>
+      <p class="hero-p">Dari servis berkala rutin, perbaikan kaki-kaki, transmisi matic hingga kopling. Datang langsung ke bengkel fisik kami atau hubungi teknisi untuk datang ke rumah Anda.</p>
+      
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="alert('Form konsultasi terkirim ke WhatsApp teknisi')">
+          Booking Jadwal / Panggil Teknisi
+        </button>
+        <a href="https://share.google/29rgZE1OSy1frcsZY" target="_blank" class="btn-secondary">
+          Petunjuk Arah Google Maps
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">5 Layanan</div>
+          <div class="stat-label">Spesialisasi Utama</div>
+        </div>
+        <div>
+          <div class="stat-num">Home Service</div>
+          <div class="stat-label">Teknisi ke Lokasi Anda</div>
+        </div>
+        <div>
+          <div class="stat-num">Transparan</div>
+          <div class="stat-label">Estimasi Sebelum Pengerjaan</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Estimation / Booking Simulation -->
+    <div>
+      <div class="booking-card">
+        <div class="card-header">
+          <div class="card-title">Simulasi & Konsultasi Servis</div>
+          <div class="card-sub">Pilih kebutuhan kendaraan Anda untuk estimasi awal</div>
+        </div>
+
+        <div class="option-toggle">
+          <button class="toggle-btn active" id="btn-workshop" onclick="setMode('workshop')">Ke Bengkel Fisik</button>
+          <button class="toggle-btn" id="btn-home" onclick="setMode('home')">Home Service (Panggilan)</button>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Jenis Layanan</label>
+          <select class="form-select" id="service-select">
+            <option>Service Berkala (Tune-up & Cek Mesin)</option>
+            <option>Perbaikan Kaki-kaki (Understeel)</option>
+            <option>Ganti Oli Mesin & Filter</option>
+            <option>Transmisi Otomatis (Matic Flushing/Repair)</option>
+            <option>Perbaikan Kopling (Clutch Replacement)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Merek & Model Kendaraan</label>
+          <input type="text" class="form-input" placeholder="Contoh: Avanza 2018 / Innova Reborn / Honda HR-V">
+        </div>
+
+        <div class="form-group" id="location-field" style="display:none;">
+          <label class="form-label">Area / Alamat Penjemputan di Pekanbaru</label>
+          <input type="text" class="form-input" placeholder="Contoh: Tampan / Marpoyan Damai / Rumbai">
+        </div>
+
+        <button class="btn-primary" style="width:100%; justify-content:center; margin-top:8px;" onclick="submitBooking()">
+          Kirim Rincian ke WhatsApp (XXXXX)
+        </button>
+
+        <p class="card-notice">Estimasi biaya dan ketersediaan teknisi akan langsung direspon oleh admin Samudra Auto Service.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trusted Brand Bar -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-text">Melayani Berbagai Merek Kendaraan Populer di Indonesia</div>
+    <div class="brand-chips">
+      <span class="brand-chip">Toyota</span>
+      <span class="brand-chip">Daihatsu</span>
+      <span class="brand-chip">Honda</span>
+      <span class="brand-chip">Mitsubishi</span>
+      <span class="brand-chip">Suzuki</span>
+      <span class="brand-chip">Nissan</span>
+      <span class="brand-chip">Hyundai / Wuling</span>
+    </div>
+  </div>
+</div>
+
+<!-- 5 Core Services -->
+<section class="section" id="layanan">
+  <div class="section-header">
+    <div class="section-tag">Spesialisasi Bengkel</div>
+    <h2 class="section-title">5 Layanan Perawatan Utama Kami</h2>
+    <p class="section-desc">Peralatan diagnosis presisi, pengerjaan rapi, dan suku cadang terpercaya untuk menjaga performa optimal mobil Anda.</p>
+  </div>
+
+  <div class="services-grid">
+    <!-- 1. Service Berkala -->
+    <div class="service-card">
+      <div>
+        <div class="service-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3 class="service-name">Service Berkala</h3>
+        <p class="service-detail">Tune up komprehensif, pembersihan injector, pengecekan busi, sistem pengapian, dan filter udara agar mesin kembali bertenaga.</p>
+        <ul class="service-points">
+          <li>General Check 25 Titik Vital</li>
+          <li>Carbon Cleaner & Throttle Body</li>
+          <li>Scanning Komputer Diagnostik OBD</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/62XXXXX" class="service-action">Konsultasi Biaya & Booking</a>
+    </div>
+
+    <!-- 2. Kaki-kaki -->
+    <div class="service-card">
+      <div>
+        <div class="service-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24M14.83 14.83l4.24 4.24M14.83 9.17l4.24-4.24M4.93 19.07l4.24-4.24"/></svg>
+        </div>
+        <h3 class="service-name">Perbaikan Kaki-kaki</h3>
+        <p class="service-detail">Menghilangkan bunyi berdecit, glodakan, dan setir lari. Pengecekan menyeluruh pada shockbreaker, tierod, rack end, bushing arm, dan bearing roda.</p>
+        <ul class="service-points">
+          <li>Pengecekan Ball Joint & Bushing</li>
+          <li>Servis Rack Steering EPS / Hidrolik</li>
+          <li>Pemasangan Shockbreaker Baru</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/62XXXXX" class="service-action">Cek Gejala Bunyi Kaki-kaki</a>
+    </div>
+
+    <!-- 3. Ganti Oli -->
+    <div class="service-card">
+      <div>
+        <div class="service-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M12 18v4M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M2 12h6M18 12h4M4.93 19.07l4.24-4.24M14.83 9.17l4.24-4.24"/></svg>
+        </div>
+        <h3 class="service-name">Ganti Oli Mesin & Filter</h3>
+        <p class="service-detail">Pilihan pelumas original berkualitas sesuai spesifikasi pabrikan kendaraan (SAE 0W-20, 5W-30, 10W-40). Mesin bersih dan suhu terlindungi.</p>
+        <ul class="service-points">
+          <li>Oli Mesin Original 100% Bergaransi</li>
+          <li>Penggantian Filter Oli & Ring Baut</li>
+          <li>Pengecekan Minyak Rem & Air Radiator</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/62XXXXX" class="service-action">Tanya Paket Oli Sesuai Mobil</a>
+    </div>
+
+    <!-- 4. Transmisi Matic -->
+    <div class="service-card">
+      <div>
+        <div class="service-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 8 6 4-6 4Z"/></svg>
+        </div>
+        <h3 class="service-name">Transmisi Auto Matic</h3>
+        <p class="service-detail">Perawatan transmisi AT konvensional & CVT. Mengatasi gejala transmisi nyendat, delay masuk gigi D/R, selip, hingga kuras matic profesional.</p>
+        <ul class="service-points">
+          <li>Kuras & Ganti Oli ATF / CVTF Mesin Dialisis</li>
+          <li>Pembersihan Solenoid & Body Valve</li>
+          <li>Diagnosa Sensor & Modul TCM</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/62XXXXX" class="service-action">Konsultasi Kendala Matic</a>
+    </div>
+
+    <!-- 5. Kopling Manual -->
+    <div class="service-card">
+      <div>
+        <div class="service-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><path d="M10.4 10.4 6.4 17.6M17.6 6.4l-4 7.2"/></svg>
+        </div>
+        <h3 class="service-name">Perbaikan Kopling</h3>
+        <p class="service-detail">Mengembalikan akselerasi mobil manual yang lemot akibat kopling aus, pedal keras, atau bau terbakar saat menanjak.</p>
+        <ul class="service-points">
+          <li>Ganti Plat Kopling (Clutch Disc)</li>
+          <li>Dekrup (Cover) & Release Bearing</li>
+          <li>Cek Master Kopling Atas & Bawah</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/62XXXXX" class="service-action">Tanya Biaya Ganti Kopling</a>
+    </div>
+
+    <!-- 6. Garansi & Transparansi Card -->
+    <div class="service-card" style="background: var(--navy); color: white; border-color: var(--navy);">
+      <div>
+        <div class="service-icon-wrap" style="background: rgba(228, 91, 52, 0.2); color: var(--orange);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="service-name" style="color:white;">Komitmen Kepuasan</h3>
+        <p class="service-detail" style="color:#cbd7df;">Semua penggantian suku cadang dan pengerjaan kami jelaskan terlebih dahulu secara terbuka tanpa biaya siluman.</p>
+        <ul class="service-points" style="color:#a5b9c7;">
+          <li>Estimasi tertulis sebelum dikerjakan</li>
+          <li>Bekas part lama dikembalikan ke Anda</li>
+          <li>Teknisi komunikatif & bergaransi pengerjaan</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/62XXXXX" class="service-action" style="color:var(--orange);">Chat Langsung dengan Mekanik</a>
+    </div>
+  </div>
+
+  <!-- Home Service Spotlight -->
+  <div class="spotlight-banner" id="home-service">
+    <div>
+      <div class="hero-tag" style="background: rgba(228, 91, 52, 0.2); color: #ff8464;">LAYANAN JEMPUT BOLA</div>
+      <h3 class="spotlight-title">Sibuk atau Mobil Mogok di Rumah? Manfaatkan Layanan Home Service.</h3>
+      <p class="spotlight-p">Kami mengirim teknisi beserta peralatan lengkap langsung ke garasi rumah atau area parkir kantor Anda di seluruh wilayah Pekanbaru. Anda tetap bisa beraktivitas tanpa membuang waktu menunggu di bengkel.</p>
+      
+      <div class="spotlight-steps">
+        <div class="step-item">
+          <div class="step-num">LANGKAH 1</div>
+          <div class="step-title">Share Lokasi & Keluhan via WhatsApp</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">LANGKAH 2</div>
+          <div class="step-title">Teknisi Datang Sesuai Waktu Janji</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">LANGKAH 3</div>
+          <div class="step-title">Pemeriksaan & Servis di Tempat Anda</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="https://wa.me/62XXXXX?text=Halo%20Samudra%20Auto%20Service,%20saya%20mau%20order%20Home%20Service" class="btn-primary" style="padding: 16px 28px; font-size: 16px;">
+        Panggil Teknisi ke Rumah (XXXXX)
+      </a>
+      <p style="font-size: 12px; color: #8ea4b2; margin-top: 12px;">Tersedia untuk Servis Berkala, Ganti Oli, Aki, Pengecekan Kaki-kaki</p>
+    </div>
+  </div>
+</section>
+
+<!-- Workshop Info & Maps -->
+<section class="workshop-section" id="lokasi">
+  <div class="workshop-grid">
+    <div class="workshop-info">
+      <div class="section-tag">Bengkel Fisik Kami</div>
+      <h2>Kunjungi Langsung Workshop Samudra Auto Service</h2>
+      <p style="color: var(--slate); line-height: 1.6; font-size: 15px;">
+        Bagi Anda yang ingin pengerjaan langsung di bengkel dengan fasilitas lift, alat kuras matic, dan ruang tunggu nyaman, workshop kami siap menyambut Anda di Pekanbaru.
+      </p>
+
+      <div class="info-box">
+        <div class="info-row">
+          <div class="info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="info-content">
+            <h4>Alamat Fisik Bengkel</h4>
+            <p>Pekanbaru, Riau (Lokasi terverifikasi di Google Maps)</p>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="info-content">
+            <h4>Jam & Hari Operasional</h4>
+            <p>Senin – Sabtu: 08.00 – 17.00 WIB (Minggu Libur / Panggilan Darurat by appointment)</p>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="info-content">
+            <h4>Kontak Resmi / Customer Support</h4>
+            <p>Telepon & WhatsApp: <strong>XXXXX</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map Preview Card -->
+    <div class="map-card">
+      <div class="map-placeholder">
+        <div class="map-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e45b34" stroke="#e45b34"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5" fill="white"/></svg>
+          Samudra Auto Service di Google Maps
+        </div>
+        <p style="font-size: 11px; color: #6b8292; margin-top: 16px;">Knowledge ID: /g/11nt9wl1k6 · Pekanbaru</p>
+      </div>
+      <div class="map-footer">
+        <div>
+          <strong style="display:block; font-size:14px; color:var(--navy);">Buka Langsung Navigasi GPS</strong>
+          <span style="font-size:12px; color:var(--muted);">Dapatkan rute tercepat via Google Maps App</span>
+        </div>
+        <a href="https://share.google/29rgZE1OSy1frcsZY" target="_blank" class="btn-primary" style="padding:10px 18px; font-size:13px;">
+          Buka Maps
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final Call to Action -->
+<section class="final-cta">
+  <div class="final-box">
+    <div class="section-tag">KONSULTASI GRATIS</div>
+    <h2 class="final-h2">Mobil Anda Butuh Perawatan atau Ada Kendala Bunyi?</h2>
+    <p class="final-p">Tidak perlu menunggu sampai mogok di jalan. Konsultasikan langsung gejala yang Anda rasakan dengan tim mekanik Samudra Auto Service.</p>
+    <a href="https://wa.me/62XXXXX" class="btn-primary" style="padding: 16px 36px; font-size: 16px; border-radius: 10px;">
+      Chat WhatsApp Sekarang: XXXXX
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">SAMUDRA AUTO SERVICE</div>
+      <p style="line-height: 1.6; max-width: 300px; margin-bottom: 20px;">
+        Bengkel perawatan mobil fisik dan layanan Home Service di Pekanbaru. Mengedepankan diagnosa jujur, pengerjaan teliti, dan transparansi biaya.
+      </p>
+      <p style="font-size: 12px; color: #6d8495;">Google Maps Listing: /g/11nt9wl1k6</p>
+    </div>
+
+    <div class="footer-col">
+      <h5>Layanan Utama</h5>
+      <ul>
+        <li><a href="#layanan">Service Berkala</a></li>
+        <li><a href="#layanan">Perbaikan Kaki-kaki</a></li>
+        <li><a href="#layanan">Ganti Oli Mesin</a></li>
+        <li><a href="#layanan">Transmisi Otomatis</a></li>
+        <li><a href="#layanan">Perbaikan Kopling</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Informasi</h5>
+      <ul>
+        <li><a href="#home-service">Cara Pesan Home Service</a></li>
+        <li><a href="#lokasi">Rute & Lokasi Bengkel</a></li>
+        <li><a href="#layanan">Standar Pengerjaan</a></li>
+        <li><a href="https://wa.me/62XXXXX">Kontak WhatsApp</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Area Home Service</h5>
+      <p style="font-size: 13px; line-height: 1.6; margin-bottom: 12px;">
+        Menjangkau seluruh wilayah Pekanbaru: Tampan, Marpoyan Damai, Bukit Raya, Sukajadi, Senapelan, Rumbai, dan sekitarnya.
+      </p>
+      <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; font-size: 12px; border: 1px solid rgba(255,255,255,0.1);">
+        Status: <strong style="color: #4ade80;">Bengkel Buka Hari Ini</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2026 Samudra Auto Service Pekanbaru. All rights reserved. Prototype Website by Kukuh.
+  </div>
+</footer>
+
+<script>
+function setMode(mode) {
+  var btnW = document.getElementById('btn-workshop');
+  var btnH = document.getElementById('btn-home');
+  var locField = document.getElementById('location-field');
+  if (mode === 'home') {
+    btnH.classList.add('active');
+    btnW.classList.remove('active');
+    locField.style.display = 'block';
+  } else {
+    btnW.classList.add('active');
+    btnH.classList.remove('active');
+    locField.style.display = 'none';
+  }
+}
+
+function submitBooking() {
+  var svc = document.getElementById('service-select').value;
+  alert('Menghubungkan ke WhatsApp Samudra Auto Service (XXXXX) untuk reservasi: ' + svc);
+}
+</script>
+
+</body>
+</html>
